@@ -1,0 +1,17 @@
+name: Python test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: deeprave/actions/test@v1
+        with:
+          python-version: '3.13'
+          pytest-args: --cov=serialization --cov-report=term-missing

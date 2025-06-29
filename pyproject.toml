@@ -1,0 +1,53 @@
+[project]
+name = "simple-serialization"
+version = "1.0.0"
+description = "A unified serialization library for Python objects combining dataclass, object, and namespace serialization"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.8"
+authors = [
+    {name = "Simple Serialization Contributors", email = "simple-serialization@example.com"},
+]
+keywords = [
+    "serialization",
+    "dataclass",
+    "json",
+    "namespace",
+    "object",
+    "serialize",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Utilities",
+]
+dependencies = []
+
+[tool.pytest.ini_options]
+python_files = "test_*.py"
+
+[dependency-groups]
+dev = [
+    "pytest>=6.0",
+    "pytest-cov",
+]
+
+[project.urls]
+Homepage = "https://github.com/deeprave/simple-serialization"
+Repository = "https://github.com/deeprave/simple-serialization"
+Documentation = "https://github.com/deeprave/simple-serialization#readme"
+Issues = "https://github.com/deeprave/simple-serialization/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["serialization"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
